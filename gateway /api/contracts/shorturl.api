@@ -1,0 +1,40 @@
+syntax = "v1"
+
+info (
+	title:  "simple short url service"
+	desc:   "simple description"
+	author: ""
+	email:  ""
+)
+
+type (
+	expandReq {
+		shorten string `form:"shorten"`
+	}
+	expandResp {
+		url string `json:"url"`
+	}
+)
+
+type (
+	shortenReq {
+		url string `json:"url"`
+	}
+	shortenResp {
+		shorted string `json:"shorted"`
+	}
+)
+
+@server (
+	prefix:  /v1
+	timeout: 3s
+	group:   tools
+)
+service Shorturl-api {
+	@handler short
+	get /shorten (shortenReq) returns (shortenResp)
+
+	@handler expand
+	get /expand (expandReq) returns (expandResp)
+}
+
