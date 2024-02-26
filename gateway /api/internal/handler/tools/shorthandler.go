@@ -3,9 +3,9 @@ package tools
 import (
 	"net/http"
 
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/logic/tools"
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/svc"
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/types"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/logic/tools"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/svc"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 

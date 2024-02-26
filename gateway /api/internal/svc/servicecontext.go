@@ -1,7 +1,7 @@
 package svc
 
 import (
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/config"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/config"
 )
 
 type ServiceContext struct {

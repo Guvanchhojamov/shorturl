@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/config"
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/handler"
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/svc"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/config"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/handler"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"

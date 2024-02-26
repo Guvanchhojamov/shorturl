@@ -3,8 +3,8 @@ package tools
 import (
 	"context"
 
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/svc"
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/types"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/svc"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/types"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

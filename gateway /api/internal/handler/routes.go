@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	tools "github.com/Guvanchhojamov/shorturl/gateway /api/internal/handler/tools"
-	"github.com/Guvanchhojamov/shorturl/gateway /api/internal/svc"
+	tools "github.com/Guvanchhojamov/shorturl/gateway/api/internal/handler/tools"
+	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )
