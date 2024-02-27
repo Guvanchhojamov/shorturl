@@ -1,6 +1,7 @@
 Name: shorturl.rpc
-ListenOn: 0.0.0.0:8888
-Etcd:
-  Hosts:
-  - 127.0.0.1:2379
-  Key: shorturl.rpc
+ListenOn: 0.0.0.0:8080
+ShortUrlService:
+  Etcd:
+    Host:
+      - localhost:2379
+    Key: shorturlrpc.rpc

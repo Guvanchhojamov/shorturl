@@ -1,3 +1,9 @@
 Name: Shorturl-api
 Host: 0.0.0.0
 Port: 8888
+Services:
+  ShortUrl:
+    Etcd:
+      Host:
+        - localhost:2379
+      Key: shorturlrpc.rpc
