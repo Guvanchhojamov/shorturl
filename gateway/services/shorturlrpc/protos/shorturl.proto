@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package shorturl;
+option go_package="./shorturl";
+
+message ExpandReq {
+  string expand=1;
+}
+message ExpandResp {
+  string url=1;
+}
+
+message shortenReq {
+  string url=1;
+}
+message shortenResp {
+  string expand=1;
+}
+
+service shorturlService{
+  rpc expand (ExpandReq) returns (ExpandResp);
+  rpc shorten (shortenReq) returns (shortenResp);
+}
+

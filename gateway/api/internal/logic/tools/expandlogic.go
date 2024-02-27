@@ -2,6 +2,7 @@ package tools
 
 import (
 	"context"
+	"github.com/Guvanchhojamov/shorturl/gateway/services/shorturlrpc/rpc/shorturl"
 
 	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/svc"
 	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/types"
@@ -24,7 +25,12 @@ func NewExpandLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ExpandLogi
 }
 
 func (l *ExpandLogic) Expand(req *types.ExpandReq) (resp *types.ExpandResp, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	//manual code expand url
+	in := &shorturl.ExpandReq{Expand: req.Shorten}
+	expanded, err := l.svcCtx.ShortUrlService.Expand(l.ctx, in)
+	if err != nil {
+		return nil, err
+	}
+	return &types.ExpandResp{Url: expanded.Url}, nil
+	//end
 }
