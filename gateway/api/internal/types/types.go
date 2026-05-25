@@ -10,7 +10,7 @@ type ExpandResp struct {
 }
 
 type ShortenReq struct {
-	Url string `json:"url"`
+	Url string `form:"url"`
 }
 
 type ShortenResp struct {

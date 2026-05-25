@@ -2,6 +2,7 @@ package tools
 
 import (
 	"context"
+	"github.com/Guvanchhojamov/shorturl/gateway/services/shorturlrpc/rpc/shorturlservice"
 
 	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/svc"
 	"github.com/Guvanchhojamov/shorturl/gateway/api/internal/types"
@@ -24,7 +25,12 @@ func NewShortLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ShortLogic 
 }
 
 func (l *ShortLogic) Short(req *types.ShortenReq) (resp *types.ShortenResp, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+	//shorten logic
+	in := &shorturlservice.ShortenReq{Url: req.Url}
+	shortened, err := l.svcCtx.ShortUrlService.Shorten(l.ctx, in)
+	if err != nil {
+		return nil, err
+	}
+	return &types.ShortenResp{Shorted: shortened.Expand}, nil
+	//shorten logic end
 }

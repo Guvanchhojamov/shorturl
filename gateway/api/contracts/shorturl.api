@@ -18,7 +18,7 @@ type (
 
 type (
 	shortenReq {
-		url string `json:"url"`
+		url string `form:"url"`
 	}
 	shortenResp {
 		shorted string `json:"shorted"`
